@@ -1,0 +1,147 @@
+/*  GLOBAL CONFIGS */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
+* { 
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+/* ANIMATIONS */
+@keyframes rotate-front {
+    to{
+        transform: rotateY(0);
+    }
+    from{
+        transform: rotateY(1800deg);
+    }
+}
+
+@keyframes rotate-back {
+    to{
+        transform: rotateY(1980deg);
+    }
+    from{
+        transform: rotateY(0);
+    }
+}
+
+/*  options */
+#game{
+    display: none;
+}
+#green,#purpple{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    transition: .2s;
+    cursor: pointer;
+}
+#green:hover,#purpple:hover{
+    border: 1px solid white;
+}
+#green{
+    background-color: #069e8c;
+}
+#purpple{
+    background-color: #9e064a;
+}
+#select-option{
+    display: flex;
+    gap:20px;
+}
+#value-bet{
+    width: 70%;
+    height: 25px;
+    outline: none;
+}
+#bet{
+    width: 28%;
+    height: 25px;
+    border: none;
+    cursor: pointer;
+}
+.container-option{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap:10px;
+}
+.options{
+    font-size: 1.2em;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap:20px;
+}
+.coins{
+    color: white;
+    font-weight: 600;
+    color:yellow;
+    margin-bottom: 30px;
+}
+
+.activeColor{
+    border: 3px solid white;
+}
+.activeColor svg{
+    fill: white;
+}
+/* */
+
+/*  GAME CONFIGS */
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #1D1E1B;
+    font-family: 'Poppins', sans-serif;
+}
+.box-flip{
+    height: 200px;
+    width: 200px;
+    position: relative;
+    border-radius: 50%;
+}
+.flipper{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    position: relative;
+    transform-style: preserve-3d;
+}
+.front-flip,.back-flip{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    position: absolute;
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.front-flip{
+    background-color: #069e8c;
+}
+.back-flip{
+    background-color: #9e064a;
+    transform: rotateY(180deg);
+}
+
+

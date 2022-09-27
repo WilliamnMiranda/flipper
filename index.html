@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css" />
+    <script src="https://unpkg.com/feather-icons"></script>
+  </head>
+  <body>
+    <div class="container">
+      <header class="coins">
+        COINS : <span id="quantity-coins"></span>
+      </header>
+      <section id="options" class="options">
+        <p>Selecione a cor que deseja apostar</p>
+        <div id="select-option">
+          <article class="container-option">
+            <div id="green"> <img src="./images/icon.svg" />  </div>
+            <p>green</p>
+          </article>
+          <article class="container-option">
+            <div id="purpple"> <img src="./images/icon.svg" />  </div>
+            <p>purpple</p>
+          </article>
+        </div>
+        <div>
+          <p>quantidade que deseja apostar</p>
+          <input id="value-bet" />
+          <button id="bet">apostar</button>
+        </div>
+      </section>
+      <section id="game">
+        <div class="box-flip">
+          <div class="flipper" id="flip">
+            <div class="front-flip"> <img src="./images/icon.svg" />  </div>
+            <div class="back-flip"> <img src="./images/icon.svg" />  </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <script type="module" src="index.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+  </body>
+</html>
